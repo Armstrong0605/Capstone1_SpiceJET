@@ -55,32 +55,24 @@ public class Oneway_Trip extends ProjectSpecification
 public Oneway_Trip startingfrom()
    {
 	WebElement originDiv = driver.findElement(By.xpath("//div[@data-testid='to-testID-origin']"));
-
-	// Click on the div to expand options or make it active
 	originDiv.click();
 
-	// Wait for options to be visible (if applicable)
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-	WebElement kochiOption = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='to-testID-origin']//div[text()='Chennai']")));
+	WebElement ChennaiOption = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='to-testID-origin']//div[text()='Chennai']")));
 
-	// Click on the "Kochi" option
-	kochiOption.click();
+	ChennaiOption.click();
 	return this;
    }
    
 public Oneway_Trip destination ()
    {
 	 WebElement destinationDiv = driver.findElement(By.xpath("//div[@data-testid='to-testID-destination']"));
+       destinationDiv.click();
 
-     // Click on the div to expand options or make it active
-     destinationDiv.click();
-
-     // Wait for the "Dubai" option to be visible (adjust the wait condition as needed)
      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
      WebElement dubaiOption = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='to-testID-destination']//div[text()='Delhi']")));
 
-     // Click on the "Dubai" option
-     dubaiOption.click();
+       dubaiOption.click();
 	return this;
    } 
    
@@ -90,13 +82,6 @@ public Oneway_Trip date() {
 
 	return this;
 }
-
-  /* public Oneway_Trip Currency (String type)
-   {
-	   Select dropdown1 = new Select (Currency);
-		dropdown1.selectByVisibleText(type);
-		return this;	
-   }*/
    
    public Oneway_Trip checkbox () throws IOException
    {
