@@ -16,6 +16,9 @@ public class HomePage extends ProjectSpecification{
 	@FindBy (xpath ="//div[contains(text(),'Signup')]")
 	WebElement Signup;
 	
+	@FindBy (xpath ="//div[contains(text(),'Login')]")
+	WebElement Login;
+	
 	public HomePage(WebDriver driver) 
 	{
 		HomePage.driver=driver;
@@ -57,6 +60,11 @@ public class HomePage extends ProjectSpecification{
 		return new Signup(driver);
 	}
       
-	
+	public page.Login Login ()
+	{
+		click(Login);
+		return new Login(driver);
+		
+	}
 
 }

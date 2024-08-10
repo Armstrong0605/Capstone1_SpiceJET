@@ -119,7 +119,7 @@ public class Utility {
 	
 	public static String[][] readExcel(String sheetname) throws Exception {
 		
-		XSSFWorkbook book = new XSSFWorkbook("\"C:\\Users\\Jenner\\eclipse-workspace\\SpiceJET\\src\\test\\resources\\Spicejet data.xlsx\"");
+		XSSFWorkbook book = new XSSFWorkbook("C:\\Users\\Jenner\\eclipse-workspace\\SpiceJET\\src\\test\\resources\\Spicejet data.xlsx");
 		
 		XSSFSheet sheet = book.getSheet(sheetname);
 		

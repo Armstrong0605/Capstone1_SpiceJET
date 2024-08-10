@@ -51,7 +51,7 @@ public class Listener extends ProjectSpecification implements ITestListener
 		}
 		
 		test.addScreenCaptureFromPath(filepath,result.getMethod().getMethodName());
-	}
+	} 
 
 	@Override
 	public void onTestSkipped(ITestResult result) {

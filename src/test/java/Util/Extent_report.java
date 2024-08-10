@@ -7,7 +7,7 @@ public class Extent_report {
 
 	public static ExtentReports getReport() {
 		
-		String path="C:\\Users\\Jenner\\eclipse-workspace\\E-Commerce_Bestbuy\\report\\Best-buy.html";
+		String path="C:\\Users\\Jenner\\eclipse-workspace\\SpiceJET\\report\\Spice-Jet.html";
 		
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 		
